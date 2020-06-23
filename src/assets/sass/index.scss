@@ -1,0 +1,567 @@
+// Variables
+
+$base: #0099ff;
+$accent: #ff9800;
+$dark: #222222;
+$grey: #3333338c;
+$light:  #f9f9f9;
+$transparent: hsla(0, 0%, 0%, 0);
+
+/*General Layout Styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root, .wrapper {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $light;
+}
+
+
+.vh-90{
+  min-height: 90vh;
+}
+.navbar-default{
+  min-height: 10vh;
+}
+
+.nav-light{
+	background-color: $light;
+	color: $dark;
+	border:0;
+  	border-top: 4px solid $base;
+  	box-shadow: 0px 0px 6px 0px hsla(0, 0%, 0%, 0.2);
+  	transition: 0.5s;
+
+	.branding {
+		font-family: Aquire;
+		font-size: 2em;
+		color: $dark;
+	}
+
+	.nav-link{
+    color: $grey;
+    font-family: MonteSemiBold;
+  }
+
+  .nav-link:hover{
+    color: $dark;
+    font-family: MonteSemiBold;
+  }
+
+  .active{
+     border-bottom: 2px solid $base;
+  }
+
+
+  .nav-toggle-style > span.navbar-toggler-icon{
+    background-color: $dark;
+  }
+
+}
+
+.nav-dark{
+	background-color: $dark;
+	color: $light;
+	border:0;
+  	border-bottom: 4px solid $accent;
+  	transition: 0.5s;
+
+	.branding {
+		font-family: Aquire;
+		font-size: 2em;
+		color: $light;
+	}
+
+	.nav-link, .nav-link:hover{
+		color: $light;
+		font-family: MonteSemiBold;
+	}
+  
+
+
+
+}
+
+.nav-transparent{
+	border-top: 4px solid $transparent ;
+	color: $light;
+	transition: 0.5s;
+
+	.branding {
+		font-family: Aquire;
+		font-size: 2em;
+		color: $light;
+	}
+
+	.nav-link, .nav-link:hover{
+		color: $light;
+		font-family: MonteSemiBold;
+	}
+
+  .active{
+     border-bottom: 2px solid $light;
+  }
+
+  .nav-toggle-style{
+    // background-color: $base;
+    color: white;
+  }
+
+  .nav-toggle-style:hover{
+    // background-color: $base;
+    color: white;
+  }
+
+  .nav-toggle-style:active{
+    // background-color: $base;
+    color: white;
+  }
+
+  .nav-toggle-style > span.navbar-toggler-icon{
+    background-color: $light;
+  }
+
+}
+
+.nav-account{
+  border-top: 4px solid $transparent ;
+  color: $light;
+  transition: 0.5s;
+
+  .branding {
+    font-family: Aquire;
+    font-size: 2em;
+    color: $light;
+  }
+
+  .nav-link{
+    color: $grey;
+    font-family: MonteSemiBold;
+  }
+
+  .nav-link:hover{
+    color: $dark;
+    font-family: MonteSemiBold;
+  }
+  
+  .active{
+     border-bottom: 2px solid $base;
+  }
+
+  .nav-toggle-style{
+    // background-color: $base;
+    color: $dark;
+  }
+
+  .nav-toggle-style:hover{
+    // background-color: $base;
+    color: $dark;
+  }
+
+  .nav-toggle-style:active{
+    // background-color: $base;
+    color: $dark;
+  }
+  
+}
+
+.section-cover{
+  min-height: 50vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.section{
+  z-index: 50;
+  margin-top: 44vh;
+}
+
+.section-below{
+  z-index: 50;
+  margin-top: 50vh;
+}
+
+.section-align{
+  min-height: 50vh;
+  z-index: 50;
+}
+
+.section-left{
+  min-height: 100vh;
+  // background-color: $base;
+  background-image: url('../images/sec-cover2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%
+}
+
+.section-right{
+  min-height: 100vh;
+  background-color: $light;
+}
+
+
+footer{
+  background-color: $dark;
+  color: $light;
+  z-index: 2;
+}
+
+.after-nav {
+  margin-top: calc(10vh) !important; 
+}
+
+
+// Font Settings
+
+@font-face {
+  font-family: 'Aquire';
+  src: local('aquire'), url(../fonts/AquireBold-8Ma60.otf) format('otf');
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: 'MonteSemiBold';
+  src: local('Montserrat'), url(../fonts/Montserrat-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'MonteLight';
+  src: local('Montserrat'), url(../fonts/Montserrat-Light.ttf) format('truetype');
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+	font-family: MonteSemiBold;
+}
+
+p{
+  padding:0;
+  margin:0;
+  font-family: MonteLight;
+}
+
+.discover-intro{
+	text-shadow: 4px 3px rgba(0, 0, 0, 0.5);
+	font-size: 3rem;
+}
+
+
+.card{
+	box-shadow: 0px 0px 6px 0px hsla(0, 0%, 0%, 0.2);
+}
+
+.search-card {
+	// border-radius: 60px;
+	width: 50vw;
+  display: none;
+}
+
+.account-card {
+  // border-radius: 60px;
+  width: 30vw;
+  background-color: $transparent;
+  border: 0px;
+  box-shadow: none;
+  .card-header {
+    background-color: $transparent;
+  }
+  .card-footer {
+    background-color: $transparent;
+  }
+}
+
+
+.overview-card {
+  border-radius: 0px;
+  box-shadow: 0px 0px 1px 0px hsla(0, 0%, 0%, 0);
+}
+
+.form-control {
+  border: 0px;
+  border-radius: 0px;
+  border-bottom: 2px solid #00a7e1;
+  background-color: hsla(89, 43%, 51%, 0);
+}
+
+.form-control:focus{
+    border-color: #f95700;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: hsla(89, 43%, 51%, 0);
+}
+
+.form-control:hover {
+    border-color: #f95700;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: hsla(89, 43%, 51%, 0);
+}
+
+
+.card-tour {
+  width: 100%;
+	margin-bottom: 20px;
+}
+
+.card-tour > a {
+	text-decoration: none;
+	color: $dark;
+}
+
+.card-tour> a > .card> .card-body>p{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 1em;
+	max-height: 2em;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+.card-tour> a> .card:hover {
+	box-shadow: 0px 0px 5px 0px $dark;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.card-tour-img{
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
+
+.card-booking-img{
+  width: 100%;
+  height: 15vh;
+  object-fit: cover;
+}
+
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 175px;
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+
+.form-edit {
+  border: 2px;
+  border-radius: 0px;
+  background-color: hsla(89, 43%, 51%, 0);
+}
+
+.form-edit:focus{
+    border-color: #f95700;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: hsla(89, 43%, 51%, 0);
+}
+
+.form-edit:hover {
+    border-color: #f95700;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: hsla(89, 43%, 51%, 0);
+}
+
+
+.highlight{
+	background-color: $accent;
+	border-radius: 70px;
+	padding: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	color: $dark;
+	font-family: MonteSemiBold;
+	font-weight: bold;
+  box-shadow: 0px 0px 1px 0px hsla(0, 0%, 0%, 0);
+}
+
+.btnHighlight{
+  background-color: #c07700;
+  color: $light;
+  border-radius: 40px;
+  margin-left: 4px;
+}
+
+.btnHighlight:hover{
+  background-color: #664002;
+  color: $light;
+}
+
+.total{
+  border-bottom: 2px solid $accent;
+}
+
+
+// swal styling
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+
+
+
+.font-light{
+  color: $light;
+}
+
+.font-dark{
+  color: $dark;
+}
+
+.btn-success, .btn-warning, .btn-primary, .btn-danger{
+  background-color: $base;
+  color: $light;
+  border: 0;
+}
+
+.btn-success:hover, .btn-warning:hover, .btn-primary:hover{;
+  background-color: $accent;
+  border: 0;
+  color: $light;
+}
+
+.btn-danger:hover{
+  background-color: #f44336;
+}
+
+
+
+
+/* #Tablet (Portrait)*/
+    /* Note: Design for a width of 768px */
+
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .search-card{
+			     width: 80vw;
+        }
+        .card-tour-img{
+          height: 20vh;
+        }
+        .after-nav-md{
+          margin-top: 5vh;
+        }
+        .account-card {
+          // border-radius: 60px;
+          width: auto;
+        }
+        .section-left{
+          min-height: 30vh;
+        }
+        .section-right{
+          min-height: 70vh;
+        }
+        .nav-account{
+            background-color: $light;
+            color: $dark;
+            border:0;
+              border-top: 4px solid $base;
+              box-shadow: 0px 0px 6px 0px hsla(0, 0%, 0%, 0.2);
+              transition: 0.5s;
+
+            .branding {
+              font-family: Aquire;
+              font-size: 2em;
+              color: $dark;
+            }
+
+            .nav-link{
+              color: $grey;
+              font-family: MonteSemiBold;
+            }
+
+            .nav-link:hover{
+              color: $dark;
+              font-family: MonteSemiBold;
+            }
+
+            .active{
+               border-bottom: 2px solid $base;
+            }
+
+            .nav-toggle-style > span.navbar-toggler-icon{
+              background-color: $dark;
+            }
+
+
+        }
+
+    }
+
+/*  #Mobile (Portrait) */
+    /* Note: Design for a width of 320px */
+
+    @media only screen and (max-width: 767px) {
+        .search-card{
+           width: 80vw;			
+        }
+        .card-tour-img{
+          height: 20vh;
+        }
+        .account-card {
+          // border-radius: 60px;
+          width: auto;
+        }
+        .after-nav-md{
+          margin-top: 10vh;
+        }
+        .section-left{
+          min-height: 20vh;
+        }
+        .section-right{
+          min-height: 70vh;
+        }
+        #inputS3{
+          width: 11vh;
+        }
+        .nav-account{
+            background-color: $light;
+            color: $dark;
+            border:0;
+              border-top: 4px solid $base;
+              box-shadow: 0px 0px 6px 0px hsla(0, 0%, 0%, 0.2);
+              transition: 0.5s;
+
+            .branding {
+              font-family: Aquire;
+              font-size: 2em;
+              color: $dark;
+            }
+
+            .nav-link{
+              color: $grey;
+              font-family: MonteSemiBold;
+            }
+
+            .nav-link:hover{
+              color: $dark;
+              font-family: MonteSemiBold;
+            }
+
+            .active{
+               border-bottom: 2px solid $base;
+            }
+            .nav-toggle-style > span.navbar-toggler-icon{
+              background-color: $dark;
+            }
+
+        }
+    }
